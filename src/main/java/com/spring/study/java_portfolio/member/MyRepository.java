@@ -3,7 +3,7 @@ package com.spring.study.java_portfolio.member;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberRepository {
+public class MyRepository {
     private String name = "강 병 주";
     private String age = "1987.06.06 ( 만35 )";
     private String address = "인천 계양구";

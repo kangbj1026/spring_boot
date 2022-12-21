@@ -2,27 +2,24 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>CSS</title>
+    <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<header th:text="${spring}"> </header>
-<section class="main">
-    <div class="middle">
-        <div class="menu">
-            <ul class="menu_list">
-                <li><a href="./">Introduce</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li>Contact</li>
-                <li>StudyIng</li>
-                <li>SpringBootMVC</li>
-            </ul>
-        </div>
-        <div class="content">
-            Projects
-        </div>
-    </div>
-</section>
+    <div id="hd_wrapper"></div>
+        <section class="main">
+            <div class="middle">
+                <div class="menu">
+                    <nav class="navbar"></nav>
+                </div>
+                <div class="content">
+                    <h2>Project List</h2>
+                </div>
+            </div>
+        </section>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/top.js"></script>
 </body>
 </html>

@@ -1,36 +1,44 @@
 package com.spring.study.java_portfolio.servier;
 
-import com.spring.study.java_portfolio.member.MemberRepository;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
+import com.spring.study.java_portfolio.member.MyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 @Service
 public class MainServer {
 
     @Autowired
-    private MemberRepository mb;
+    private MyRepository my;
 
     public String getMain(Model model) {
-        LinkedHashMap<String, String> introList = new LinkedHashMap<>();
-        introList.put(" name "," " + mb.getName());
-        introList.put("age "," " + mb.getAge() + "\n");
-        introList.put("address "," " + mb.getAddress() + "\n");
-        introList.put("career "," " + mb.getCareer() + "\n");
-
         String introduction = "Introduction";
+        String skills = "Skills";
 
-        model.addAttribute("spring", "Spring Boot MVC Portfolio ");
+        LinkedHashMap<String, String> introList = new LinkedHashMap<>();
+        introList.put("name "," " + my.getName());
+        introList.put("age "," " + my.getAge());
+        introList.put("address "," " + my.getAddress());
+        introList.put("career "," " + my.getCareer());
+
+        LinkedHashMap<String, String> skillsList = new LinkedHashMap<>();
+
+        ArrayList frontEnd = new ArrayList(), backEnd = new ArrayList(), frameWork = new ArrayList();
+        frontEnd.add(" HTML, CSS, JavaScript, JQuery, React(초급) ");
+        backEnd.add("  PHP, JAVA, Python(기초) ");
+        frameWork.add(" Spring, Spring Boot, STS, Codeigniter, GitHub ");
+
+        skillsList.put("FRONT END ", " " + String.valueOf(frontEnd));
+        skillsList.put("BACK END ", " " + String.valueOf(backEnd));
+        skillsList.put("FrameWork ", " " + String.valueOf(frameWork));
+
         model.addAttribute("introduction", introduction);
         model.addAttribute("content", introList);
+        model.addAttribute("skills", skills);
+        model.addAttribute("skillsList", skillsList);
         return "main";
     }
 

@@ -1,9 +1,9 @@
 function navItems() {
     let links = [
-        ['Introduce', './'],
-        ['Projects', './projects.html'],
-        ['Contact', './contact.html'],
-        ['StudyIng', './studying.html']
+        ['Introduce', './portfolio'],
+        ['Projects', './projects'],
+        ['Contact', './contact'],
+        ['StudyIng', './studying']
     ];
 
     let navbar = document.getElementsByClassName('navbar');

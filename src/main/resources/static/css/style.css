@@ -1,14 +1,15 @@
 * {
     box-sizing: border-box;
 }
-.top_header {
-    text-decoration: none;
-}
-header {
+#hd_wrapper {
     height: 50px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
+.header_href h2 a {
+    text-decoration: none;
+}
+
 .middle {
     display: flex;
 }
@@ -24,6 +25,7 @@ header {
     list-style: none;
     padding: 10px;
 }
+
 .content {
     padding: 5px;
     margin-left: 30px;
