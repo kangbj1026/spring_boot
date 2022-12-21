@@ -1,6 +1,6 @@
 function navItems() {
     let links = [
-        ['Introduce', './portfolio'],
+        ['Introduce', './'],
         ['Projects', './projects'],
         ['Contact', './contact'],
         ['StudyIng', './studying']
