@@ -14,23 +14,26 @@
                 <nav class="navbar"></nav>
             </div>
             <div class="content">
-                <h2 th:text="${introduction}"></h2>
+                <p th:text="${introduction}" class="tag"></p>
                 <ul>
                     <li th:each="contents : ${content}">
-                        <h4 th:text="${contents}"></h4>
+                        <p th:text="${contents}"></p>
                     </li>
                 </ul>
-                <h2 th:text="${skills}"></h2>
+                <p th:text="${skills}" class="tag"></p>
                 <ul>
                     <li th:each="skillsLists: ${skillsList}">
-                        <h4 th:text="${skillsLists}"></h4>
+                        <p th:text="${skillsLists}"></p>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <script src="js/navbar.js"></script>
+    <div id="ft"></div>
     <script src="js/top.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/event.js"></script>
 </body>
 </html>

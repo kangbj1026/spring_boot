@@ -15,10 +15,13 @@ function headerWrapper() {
 function hdWrapperLink(name) {
     let mainDiv = document.createElement('div');
     let mainH2 = document.createElement('h2');
+    let mainImg = document.createElement('img');
     let mainLink = document.createElement('a');
     mainLink.href = "/portfolio";
     mainLink.innerText = name;
+    mainImg.src = "/img/bunny.png";
     mainH2.appendChild(mainLink);
+    mainDiv.appendChild(mainImg);
     mainDiv.appendChild(mainH2);
     mainDiv.classList.add("header_href");
 
@@ -33,4 +36,5 @@ function hdWrapperText(text) {
 
     return simpleDiv;
 }
+
 headerWrapper();

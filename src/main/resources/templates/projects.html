@@ -8,18 +8,37 @@
 </head>
 <body>
     <div id="hd_wrapper"></div>
-        <section class="main">
-            <div class="middle">
-                <div class="menu">
-                    <nav class="navbar"></nav>
-                </div>
-                <div class="content">
-                    <h2>Project List</h2>
+    <section class="main">
+        <div class="middle">
+            <div class="menu">
+                <nav class="navbar"></nav>
+            </div>
+            <div class="content">
+                <h2 th:text="${projects}" class="tag"></h2>
+                <div th:each="title, i: ${titles}" class="project_container">
+                    <p th:text="${i.count} + '. ' + ${title} + ' ' + ${dates[i.index]}"> </p>
+                    <div class="description">
+                    <p>Language : PHP, JavaScript
+                    library : Jquery, Jsp, Ajax, Bootstrap
+                    DB : MySQL
+                    API : <span th:text="${apis[i.index]}"></span>
+                    개발환경 : Windows10, cafe24
+                    Editor : Visual Studio Code, Edit Plus
+                    Open Source : 그누보드
+                    </p>
+                    <p><img th:src="${imgs[i.index]}"></p>
+                    </div>
+                    <a th:text="${urls[i.index]}" th:href="${urls[i.index]}"></a>
+                    <p th:text="${checks[i.index]}" class="checks"></p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    <script src="js/navbar.js"></script>
+    <div id="ft"></div>
     <script src="js/top.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/event.js"></script>
 </body>
 </html>
