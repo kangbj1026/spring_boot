@@ -19,7 +19,7 @@ function hdWrapperLink(name) {
     let mainLink = document.createElement('a');
     mainLink.href = "/portfolio";
     mainLink.innerText = name;
-    mainImg.src = "/img/bunny.png";
+    mainImg.src = "img/bunny.png";
     mainH2.appendChild(mainLink);
     mainDiv.appendChild(mainImg);
     mainDiv.appendChild(mainH2);
